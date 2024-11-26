@@ -1,0 +1,21 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    env_file:
+      - secrets/.env
+
+  db:
+    image: postgres:alpine
+    ports:
+      - "5555:5432"
+    volumes:
+      - bookstore_data:/var/lib/postgresql/data
+    env_file:
+      - secrets/.env
+
+volumes:
+    bookstore_data:
