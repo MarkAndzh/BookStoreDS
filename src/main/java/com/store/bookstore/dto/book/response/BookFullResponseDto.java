@@ -1,18 +1,17 @@
-package com.store.bookstore.dto;
+package com.store.bookstore.dto.book.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import com.store.bookstore.dto.author.response.AuthorResponseDto;
+import lombok.*;
 
 import java.util.UUID;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Setter
-@Getter
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class BookFullResponseDto {
-    private UUID id;
+    private String id;
     private String title;
     private String description;
     private Integer pageCount;

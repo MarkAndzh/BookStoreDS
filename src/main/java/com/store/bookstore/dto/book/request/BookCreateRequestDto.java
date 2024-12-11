@@ -1,15 +1,15 @@
-package com.store.bookstore.dto;
+package com.store.bookstore.dto.book.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Getter
-@Setter
-public class BookRequestDto {
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class BookCreateRequestDto {
     private String title;
     private String description;
-    private int pageCount;
+    private Integer pageCount;
     private String authorId;
 }

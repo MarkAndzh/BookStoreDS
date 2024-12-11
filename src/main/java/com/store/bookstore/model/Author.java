@@ -9,6 +9,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Table(
+        name = "author",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"name", "surname"})
+        }
+)
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder

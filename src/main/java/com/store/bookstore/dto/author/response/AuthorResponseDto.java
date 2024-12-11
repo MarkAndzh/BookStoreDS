@@ -1,16 +1,10 @@
-package com.store.bookstore.dto;
+package com.store.bookstore.dto.author.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.List;
+import lombok.*;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@Setter
-@Getter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthorResponseDto {
